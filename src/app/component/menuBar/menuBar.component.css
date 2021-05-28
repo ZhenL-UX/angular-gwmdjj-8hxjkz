@@ -1,0 +1,11 @@
+.sidebar {
+  width: 266px;
+}
+
+.logo {
+  background-color: #322e48;
+  width: 288px;
+  height: 58px;
+  display: block;
+  line-height: 58px;
+}

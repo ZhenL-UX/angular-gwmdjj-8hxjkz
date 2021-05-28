@@ -1,0 +1,11 @@
+.menu-info {
+  height: 58px;
+  color: #ffffff;
+  line-height: 58px;
+  margin-right: 20px;
+}
+
+.menu-info-user {
+  color: #ffffff;
+  cursor: default;
+}

@@ -1,0 +1,20 @@
+<div class="top-bar">
+  <app-menuBar></app-menuBar>
+  <div style="float: left;height: 58px;line-height: 58px;">
+    <p-dropdown [options]="searchTerm" [(ngModel)]="selectedSearchTerm" placeholder="Select a search term"
+      class="mr10 fl" [style]="{ height: '30px', 'line-height': '30px','margin-left': '4px','margin-top':'14px'}">
+    </p-dropdown>
+    <input type="text" pInputText class="mr10 h30 fl mt14" placeholder="Search" style="background-color: #ffffff;" />
+    <button class="btn btn-primary h30 fl mt14">Search</button>
+  </div>
+  <app-menuInfo></app-menuInfo>
+</div>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

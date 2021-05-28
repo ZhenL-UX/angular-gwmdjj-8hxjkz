@@ -1,0 +1,413 @@
+<div class="card " style="justify-content: space-between;">
+  <div style="display: flex;">
+    <span class="f16 c2 bold mr10" style="margin-top: 7px;">Account Number :</span>
+    <p-dropdown [options]="region" [(ngModel)]="selectedRegion" optionLabel="name"
+      [style]="{ height: '30px', 'line-height': '30px' }" id="dropdown-account">
+    </p-dropdown>
+    <div class="vLine"></div>
+    <button class="btn-hollow btn-hollow-default h30 mr10">
+      <i class="fa fa-caret-left  mr10" aria-hidden="true"></i>
+      <span>11104251</span>
+    </button>
+    <button class="btn-hollow btn-hollow-default h30">
+      <span class="mr10">11104253</span>
+      <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+  </div>
+  <div>
+    <button class="btn btn-primary h30 mr10 ">Apply for Repo Title</button>
+    <button class="btn-hollow btn-hollow-primary h30 " (click)='backButtonClick()'>Back</button>
+  </div>
+</div>
+
+<div class="p-grid">
+  <div class="p-col-4">
+    <!-- 1.1 Vehicle Information -->
+    <div class="box-accLevel">
+      <h5 class="c2 bold p-col-12 text-l">
+        <img src="assets/img/icon_title.png" alt="" />
+        Vehicle Information
+      </h5>
+      <p-table [value]=" vehicleInfoData" [style]="{ marginTop: '8px'}">
+        <ng-template pTemplate="body" let-vehicleInfoData>
+          <tr>
+            <td class="text-l f13 bold c333">{{ vehicleInfoData.key }}</td>
+            <td>{{ vehicleInfoData.value }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+
+    <!-- 1.2 Customer Information -->
+    <div class="box-accLevel mt14">
+      <h5 class="c2 bold p-col-12 text-l">
+        <img src="assets/img/icon_title.png" alt="" />
+        Customer Information
+      </h5>
+      <p-table [value]=" customerInfoData" [style]="{ marginTop: '8px'}">
+        <ng-template pTemplate="body" let-customerInfoData>
+          <tr>
+            <td class="text-l f13 bold c333">{{ customerInfoData.key }}</td>
+            <td class="text-l" style="width: 65%;">{{ customerInfoData.value }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+
+    <!-- 1.3 Account Balance -->
+    <div class="box-accLevel mt14">
+      <h5 class="c2 bold p-col-12 text-l">
+        <img src="assets/img/icon_title.png" alt="" />
+        Account Balance
+      </h5>
+      <p-table [value]=" accBalanceData" [style]="{ marginTop: '8px'}">
+        <ng-template pTemplate="body" let-accBalanceData>
+          <tr>
+            <td class="text-l f13 bold c333">{{ accBalanceData.key }}</td>
+            <td>{{ accBalanceData.value }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+
+    <!-- 1.4 Contract Information -->
+    <div class="box-accLevel mt14">
+      <h5 class="c2 bold p-col-12 text-l">
+        <img src="assets/img/icon_title.png" alt="" />
+        Contract Information
+      </h5>
+      <p-table [value]=" contractInfoData" [style]="{ marginTop: '8px'}">
+        <ng-template pTemplate="body" let-contractInfoData>
+          <tr>
+            <td class="text-l f13 bold c333">{{ contractInfoData.key }}</td>
+            <td>{{ contractInfoData.value }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+
+    <!-- 1.5 Account Status -->
+    <div class="box-accLevel mt14">
+      <h5 class="c2 bold p-col-12 text-l">
+        <img src="assets/img/icon_title.png" alt="" />
+        Account Status
+      </h5>
+      <p-table [value]=" accStatusData" [style]="{ marginTop: '8px'}">
+        <ng-template pTemplate="body" let-accStatusData>
+          <tr>
+            <td class="text-l f13 bold c333">{{ accStatusData.key }}</td>
+            <td>{{ accStatusData.value }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+
+  </div>
+
+  <div class="p-col-4">
+    <!-- 2.1 Titel Information -->
+    <div class="box-accLevel">
+      <h5 class="c2 bold p-col-12 text-l">
+        <img src="assets/img/icon_title.png" alt="" />
+        Titel Information
+      </h5>
+      <p-table [value]=" titelInfoData" [style]="{ marginTop: '8px'}">
+        <ng-template pTemplate="body" let-titelInfoData>
+          <tr>
+            <td class="text-l f13 bold c333">{{ titelInfoData.key }}</td>
+            <td>{{ titelInfoData.value }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+
+    <!-- 2.2 Title Vendor Tracking Attibutes -->
+    <div class="box-accLevel mt14">
+      <h5 class="c2 bold p-col-12 text-l">
+        <img src="assets/img/icon_title.png" alt="" />
+        Title Vendor Tracking Attibutes
+      </h5>
+      <p-table [value]=" titleVenTracAttData" [style]="{ marginTop: '8px'}">
+        <ng-template pTemplate="body" let-titleVenTracAttData>
+          <tr>
+            <td class="text-l f13 bold c333">{{ titleVenTracAttData.key }}</td>
+            <td>{{ titleVenTracAttData.value }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+
+    <!-- 2.3 Auction Information -->
+    <div class="box-accLevel mt14">
+      <h5 class="c2 bold p-col-12 text-l">
+        <img src="assets/img/icon_title.png" alt="" />
+        Auction Information
+      </h5>
+      <p-table [value]=" auctionInfoData" [style]="{ marginTop: '8px'}">
+        <ng-template pTemplate="body" let-auctionInfoData>
+          <tr>
+            <td class="text-l f13 bold c333">{{ auctionInfoData.key }}</td>
+            <td>{{ auctionInfoData.value }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+
+    <!-- 2.4 Repo Tracking attibutes -->
+    <div class="box-accLevel mt14">
+      <h5 class="c2 bold p-col-12 text-l">
+        <img src="assets/img/icon_title.png" alt="" />
+        Repo Tracking Attibutes
+      </h5>
+      <p-table [value]=" repoTraAttData" [style]="{ marginTop: '8px'}">
+        <ng-template pTemplate="body" let-repoTraAttData>
+          <tr>
+            <td class="text-l f13 bold c333">{{ repoTraAttData.key }}</td>
+            <td>{{ repoTraAttData.value }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+
+  </div>
+
+  <div class="p-col-4">
+    <!-- 3.1  Account Conditions -->
+    <div class="box-accLevel">
+      <h5 class="c2 bold p-col-12 text-l">
+        <img src="assets/img/icon_title.png" alt="" />
+        Account Conditions
+      </h5>
+      <p-table [value]=" accConditionsData" [style]="{ marginTop: '8px'}">
+        <ng-template pTemplate="header">
+          <tr>
+            <th class="text-l" style="width: 55%;">Condition</th>
+            <th class="text-l">Start Date</th>
+            <th class="text-l">Followup Date</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-accConditionsData>
+          <tr>
+            <td>{{ accConditionsData.condition }}</td>
+            <td>{{ accConditionsData.startDate }}</td>
+            <td>{{ accConditionsData.followupDate }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+
+    <!-- 3.2  Alerts -->
+    <div class="box-accLevel mt14">
+      <h5 class="c2 bold p-col-12 text-l">
+        <img src="assets/img/icon_title.png" alt="" />
+        Alerts
+      </h5>
+      <p-table [value]=" alertsData" [style]="{ marginTop: '8px'}">
+        <ng-template pTemplate="header">
+          <tr>
+            <th class="text-l">Comment</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-alertsData>
+          <tr>
+            <td>{{ alertsData.comment }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+
+    <!-- 3.3 Event Log -->
+    <div class="box-accLevel mt14">
+      <h5 class="c2 bold p-col-12 text-l">
+        <img src="assets/img/icon_title.png" alt="" />
+        Account Conditions
+      </h5>
+      <p-table [value]=" eventLogData" [style]="{ marginTop: '8px'}">
+        <ng-template pTemplate="header">
+          <tr>
+            <th class="text-l" style="width: 55%;">Created On</th>
+            <th class="text-l">Created By </th>
+            <th class="text-l">Event</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-eventLogData>
+          <tr>
+            <td>{{ eventLogData.createdOn }}</td>
+            <td>{{ eventLogData.createdBy }}</td>
+            <td>{{ eventLogData.event }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>
+<div class="cl"></div>
+<div class="p-grid mt0">
+  <div class="p-col-6">
+    <!-- 1-1 Daybreak Comments -->
+    <div class="box-accLevel">
+      <h5 class="c2 bold p-col-12 text-l">
+        <img src="assets/img/icon_title.png" alt="" />
+        Daybreak Comments
+      </h5>
+
+      <p-table [value]=" daybreakCommentsData" [style]="{ marginTop: '8px'}" [scrollable]="true" scrollHeight="200px">
+        <ng-template pTemplate="header">
+          <tr>
+            <th class="text-l">Created On</th>
+            <th class="text-l">Created By </th>
+            <th class="text-l" style="width: 60%;">Comment</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-daybreakCommentsData>
+          <tr>
+            <td>{{ daybreakCommentsData.createdOn }}</td>
+            <td>{{ daybreakCommentsData.createdBy }}</td>
+            <td style="width: 60%;">{{ daybreakCommentsData.comment }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+    <!-- 1-2 Create Call Activity -->
+    <div class="box-accLevel mt14">
+      <h5 class="c2 bold p-col-12 text-l">
+        <img src="assets/img/icon_title.png" alt="" />
+        Create Call Activity
+      </h5>
+      <div style="padding-left: 7px;padding-top: 8px;">
+        <div class="p-field p-grid">
+          <label for="firstname3" class="p-col-fixed f13 c333 bold" style="width:150px"> Create For :</label>
+          <div class="p-col">
+            <div class="p-grid" style="width:600px;">
+              <div class="p-col-3" style="padding-top: 7px;">
+                <p-radioButton name="group1" value="Option 1" label="Account" [(ngModel)]="val1" inputId="opt1"
+                  class="lh20">
+                </p-radioButton>
+              </div>
+              <div class="p-col-3" style="padding-top: 7px;">
+                <p-radioButton name="group1" value="Option 2" label="Dealer" [(ngModel)]="val1" inputId="opt2"
+                  class="lh20">
+                </p-radioButton>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-field p-grid">
+          <label for="Action" class="p-col-fixed f13 c333 bold" style="width:150px">Action :</label>
+          <div class="p-col">
+            <input id="Action" type="text" pInputText class="h30 w240">
+          </div>
+        </div>
+        <div class="p-field p-grid">
+          <label for="Result" class="p-col-fixed f13 c333 bold" style="width:150px">Result :</label>
+          <div class="p-col">
+            <input id="Result" type="text" pInputText class="h30 w240">
+          </div>
+        </div>
+        <div class="p-field p-grid">
+          <label for="Promise" class="p-col-fixed f13 c333 bold" style="width:150px">Promise Amount :</label>
+          <div class="p-col">
+            <input id="Promise" type="text" pInputText class="h30 w240">
+          </div>
+        </div>
+        <div class="p-field p-grid">
+          <label for="Date" class="p-col-fixed f13 c333 bold" style="width:150px">Promise Date :</label>
+          <div class="p-col">
+            <span class="ng-tns-c6-11 ui-calendar ui-calendar-w-btn">
+              <p-calendar [(ngModel)]="promiseDate" [showIcon]="true" dateFormat="mm/dd/yy" selectionMode="single">
+              </p-calendar>
+            </span>
+          </div>
+        </div>
+        <div class="p-field p-grid">
+          <label for="Follow" class="p-col-fixed f13 c333 bold" style="width:150px">Follow Up Date :</label>
+          <div class="p-col">
+            <span class="ng-tns-c6-11 ui-calendar ui-calendar-w-btn mr40">
+              <p-calendar [(ngModel)]="followUpDate" [showIcon]="true" dateFormat="mm/dd/yy" selectionMode="single">
+              </p-calendar>
+            </span>
+            <p-checkbox value="Add Follow Up" [(ngModel)]="selectedAdd" inputId="addFollowUp" class="lh30"></p-checkbox>
+            <label class="ml10" for="addFollowUp">Add Follow Up</label>
+          </div>
+        </div>
+        <div class="p-field p-grid">
+          <label for="Comment" class="p-col-fixed f13 c333 bold" style="width:150px">Comment :</label>
+          <div class="p-col">
+            <textarea style="width: 100%; height: 60px; border-radius: 3px;" id="Comment"></textarea>
+          </div>
+        </div>
+        <div class="p-field p-grid" style="margin-bottom: 0;">
+          <label style="width:150px"></label>
+          <div class="p-col">
+            <button class="btn btn-primary h30 mr10">Save</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="p-col-6">
+    <!-- 2-1 Account Notes -->
+    <div class="box-accLevel">
+      <h5 class="c2 bold p-col-12 text-l">
+        <img src="assets/img/icon_title.png" alt="" />
+        Account Notes
+      </h5>
+      <p-table [value]=" accNotesData" [style]="{ marginTop: '8px'}" [scrollable]="true" scrollHeight="493px">
+        <ng-template pTemplate="header">
+          <tr>
+            <th class="text-l">Created On</th>
+            <th class="text-l">Created By </th>
+            <th class="text-l">Type</th>
+            <th class="text-l" style="width: 50%;">Message</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-accNotesData>
+          <tr>
+            <td>{{ accNotesData.createdOn }}</td>
+            <td>{{ accNotesData.createdBy }}</td>
+            <td>{{ accNotesData.type }}</td>
+            <td style="width: 50%;">{{ accNotesData.message }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+      <div class="p-field p-grid mt10">
+        <label for="Comment2" class="p-col-fixed f13 c333 bold" style="width:150px">Comment :</label>
+        <div class="p-col">
+          <textarea style="width: 100%; height: 60px;" id="Comment2"></textarea>
+        </div>
+      </div>
+      <div class="p-field p-grid mt10">
+        <label style="width:150px"></label>
+        <div class="p-col">
+          <p-checkbox value="1" [(ngModel)]="selectedAdd" inputId="1" class="lh30"></p-checkbox>
+          <label class="ml10 mr40" for="1">Account</label>
+          <p-checkbox value="2" [(ngModel)]="selectedAdd" inputId="2" class="lh30"></p-checkbox>
+          <label class="ml10 mr40" for="2">OFSLL</label>
+          <p-checkbox value="3" [(ngModel)]="selectedAdd" inputId="3" class="lh30"></p-checkbox>
+          <label class="ml10 mr40" for="3">AutoIMS</label>
+          <p-checkbox value="4" [(ngModel)]="selectedAdd" inputId="4" class="lh30"></p-checkbox>
+          <label class="ml10" for="4">Dealer</label>
+        </div>
+      </div>
+      <div class="p-field p-grid" style="margin-bottom: 0;">
+        <label style="width:150px"></label>
+        <div class="p-col">
+          <button class="btn btn-primary h30 mr10">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mt7" style="background-color: #322e48;">
+  <div style="display: flex;">
+    <span class="white bold mr10">
+      <i class="fa fa-link" aria-hidden="true"></i> Hyper Links :
+    </span>
+    <button class="btn-link-white ml10 mr10">Dealer Track</button>
+    <div class="vLine"></div>
+    <button class="btn-link-white ml10 mr10">FileNet Link</button>
+    <div class="vLine"></div>
+    <button class="btn-link-white ml10 ">AutoIMS</button>
+  </div>
+</div>

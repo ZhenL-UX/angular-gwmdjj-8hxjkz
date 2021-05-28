@@ -1,0 +1,67 @@
+<div class="card " style="justify-content: space-between;">
+  <div style="display: flex;">
+    <p-dropdown [options]="region" [(ngModel)]="selectedRegion" optionLabel="name"
+      [style]="{ height: '30px', 'line-height': '30px' , 'background': '#5b62b3' }" id="dropdown-region2">
+    </p-dropdown>
+    <div class="vLine"></div>
+    <p-dropdown [options]="searchTerm" [(ngModel)]="selectedSearchTerm" placeholder="Select a search term" class="mr10"
+      [style]="{ height: '30px', 'line-height': '30px' }">
+    </p-dropdown>
+    <input type="text" pInputText class="mr10" placeholder="Search" />
+    <button class="btn-hollow btn-hollow-primary h30">Search</button>
+  </div>
+  <div>
+    <button class="btn-hollow btn-hollow-primary h30 " (click)='backButtonClick()'>Back</button>
+  </div>
+</div>
+<div class="box">
+  <h5 class="c2 bold p-col-12" style="text-align: left;">
+    <img src="assets/img/icon_title.png" alt="" />
+    PA/VA Apply for Repo Title
+  </h5>
+  <p-table [value]="tableData" [style]="{ marginTop: '8px' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <!-- style="width: 15%;" -->
+        <th>Account</th>
+        <th>Region</th>
+        <th style="width: 10%;">Auction</th>
+        <th>Age</th>
+        <th>Year</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th style="width: 10%;">VIN</th>
+        <th>Title Type</th>
+        <th>Alerts</th>
+        <th>Alert Date</th>
+        <th style="width: 12%;">Title Stage</th>
+        <th>Stage Date</th>
+        <th>Last Note Date</th>
+        <th>Last Note</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-tableData>
+      <tr>
+        <td (click)="detailClick()" class="btn-link">{{ tableData.account }}</td>
+        <td>{{ tableData.region }}</td>
+        <td>{{ tableData.auction }}</td>
+        <td>{{ tableData.age }}</td>
+        <td>{{ tableData.year }}</td>
+        <td>{{ tableData.make }}</td>
+        <td>{{ tableData.model }}</td>
+        <td>{{ tableData.vin }}</td>
+        <td>{{ tableData.titleType }}</td>
+        <td>{{ tableData.alerts }}</td>
+        <td>{{ tableData.alertDate }}</td>
+        <td>{{ tableData.titleStage }}</td>
+        <td>{{ tableData.stageDate }}</td>
+        <td>{{ tableData.lastNoteDate }}</td>
+        <td>{{ tableData.lastNote }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+  <p-paginator [alwaysShow]="false" [rows]="listParam.rows" [first]="listParam.first"
+    [totalRecords]="listParam.totalRecords" (onPageChange)="paginate($event)">
+  </p-paginator>
+</div>

@@ -1,0 +1,314 @@
+/* flex */
+.p-col {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 7px;
+}
+
+.p-col-1,
+.p-col-2,
+.p-col-3,
+.p-col-4,
+.p-col-5,
+.p-col-6,
+.p-col-7,
+.p-col-8,
+.p-col-9,
+.p-col-10,
+.p-col-11,
+.p-col-12 {
+  flex: 0 0 auto;
+  padding: 7px;
+}
+
+/* table */
+body .ui-table .ui-table-thead > tr > th {
+  background-color: #f2f3f9;
+  border: none;
+}
+
+body .ui-table .ui-table-thead > tr {
+  border: 1px solid #d4d4d4;
+}
+
+body .ui-table .ui-table-tbody > tr {
+  border: 1px solid #d4d4d4;
+}
+
+body .ui-table .ui-table-tbody > tr > td {
+  /* background-color: #ffffff !important; */
+  border: none;
+}
+
+body .ui-table .ui-table-tbody > tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+body .ui-table .ui-table-tbody > tr:nth-child(even):hover {
+  background-color: #eeeff7;
+}
+
+body .ui-table .ui-table-tfoot > tr > td {
+  border: none;
+}
+
+body .ui-table .ui-table-tbody > tr:hover {
+  background-color: #eeeff7;
+}
+
+/* select dropdown box */
+
+body .ui-inputtext {
+  font-size: 13px;
+  text-indent: 0.5em;
+  border: 1px solid #d4d4d4;
+  color: #666666;
+  background: none;
+  padding: 0;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+body .ui-dropdown {
+  background: #ffffff;
+  border: 1px solid #d4d4d4;
+  transition: border-color 0.2s;
+}
+
+body .ui-dropdown:not(.ui-state-disabled):hover {
+  border-color: #e9ecef;
+}
+
+body
+  .ui-dropdown-panel
+  .ui-dropdown-items
+  .ui-dropdown-item:not(.ui-state-highlight):not(.ui-state-disabled):hover {
+  background-color: #e9ecef;
+}
+
+body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item.ui-state-highlight,
+body
+  .ui-dropdown-panel
+  .ui-dropdown-items
+  .ui-dropdown-item-group.ui-state-highlight {
+  color: #ffffff;
+  background-color: #5b62b3;
+}
+
+body .ui-dropdown:not(.ui-state-disabled).ui-state-focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.2rem #dde0ff;
+  border-color: #5b62b3;
+}
+
+/* select dropdown box E */
+
+/* input */
+body .ui-inputtext:enabled:focus:not(.ui-state-error) {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.2em #dde0ff;
+  border-color: #5b62b3;
+}
+
+/* radio */
+body .ui-radiobutton .ui-radiobutton-box.ui-state-active {
+  border-color: #5b62b3;
+  background-color: #5b62b3;
+  color: #ffffff;
+}
+
+body .ui-radiobutton .ui-radiobutton-box.ui-state-focus {
+  box-shadow: 0 0 0.2em #dde0ff;
+}
+
+body
+  .ui-radiobutton
+  .ui-radiobutton-box.ui-state-active:not(.ui-state-disabled):hover {
+  border-color: #454da0;
+  background-color: #454da0;
+  color: #ffffff;
+}
+
+/* checkbox */
+body .ui-chkbox .ui-chkbox-box.ui-state-active {
+  border-color: #5b62b3;
+  background-color: #5b62b3;
+  color: #ffffff;
+}
+
+body .ui-chkbox .ui-chkbox-box.ui-state-focus {
+  box-shadow: 0 0 0.2em #dde0ff;
+  border-color: #5b62b3;
+}
+
+body .ui-chkbox .ui-chkbox-box.ui-state-active:not(.ui-state-disabled):hover {
+  border-color: #454da0;
+  background-color: #454da0;
+  color: #ffffff;
+}
+
+/* paginator */
+
+body .ui-paginator {
+  background-color: #ffffff;
+  border: 1px solid #d4d4d4;
+  border-top: none;
+}
+
+body .ui-paginator .ui-paginator-pages .ui-paginator-page,
+body .ui-paginator .ui-paginator-first,
+body .ui-paginator .ui-paginator-prev,
+body .ui-paginator .ui-paginator-next,
+body .ui-paginator .ui-paginator-last {
+  height: 30px;
+  width: 30px;
+  min-width: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  color: #666666;
+  border: none;
+  margin: 3px;
+}
+
+body
+  .ui-paginator
+  .ui-paginator-first:not(.ui-state-disabled):not(.ui-state-active):hover,
+body
+  .ui-paginator
+  .ui-paginator-prev:not(.ui-state-disabled):not(.ui-state-active):hover,
+body
+  .ui-paginator
+  .ui-paginator-next:not(.ui-state-disabled):not(.ui-state-active):hover,
+body
+  .ui-paginator
+  .ui-paginator-last:not(.ui-state-disabled):not(.ui-state-active):hover {
+  background-color: #e0e0e0 !important;
+}
+
+body .ui-paginator .ui-paginator-pages .ui-paginator-page.ui-state-active,
+body
+  .ui-paginator
+  .ui-paginator-first:not(.ui-state-disabled):not(.ui-state-active):focus,
+body
+  .ui-paginator
+  .ui-paginator-prev:not(.ui-state-disabled):not(.ui-state-active):focus,
+body
+  .ui-paginator
+  .ui-paginator-next:not(.ui-state-disabled):not(.ui-state-active):focus,
+body
+  .ui-paginator
+  .ui-paginator-last:not(.ui-state-disabled):not(.ui-state-active):focus {
+  color: #ffffff;
+  background-color: #5b62b3 !important;
+}
+
+body
+  .ui-paginator
+  .ui-paginator-pages
+  .ui-paginator-page.ui-state-active:hover {
+  background-color: #454da0 !important;
+}
+
+body .ui-paginator .ui-paginator-first:focus,
+body .ui-paginator .ui-paginator-prev:focus,
+body .ui-paginator .ui-paginator-next:focus,
+body .ui-paginator .ui-paginator-last:focus,
+body .ui-paginator .ui-paginator-pages .ui-paginator-page:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.2em #dde0ff;
+}
+
+/* paginator E */
+
+/* calendar */
+body .ui-datepicker table td.ui-datepicker-today > a,
+body .ui-datepicker table td.ui-datepicker-today > span {
+  background-color: #69c7e4;
+  color: #ffffff;
+}
+
+body .ui-datepicker table td > a.ui-state-active,
+body .ui-datepicker table td > span.ui-state-active {
+  color: #ffffff;
+  background-color: #5b62b3;
+}
+
+.repurchaseUpload .ui-dialog .ui-dialog-content {
+  padding: 0.571em 1em 5em 1em !important;
+}
+
+.rep_account .ui-dialog .ui-dialog-titlebar {
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+}
+
+.scrollPanel .ui-scrollpanel-content {
+  padding: 0 !important;
+}
+
+.ui-table-scrollable-header,
+.ui-table-scrollable-footer {
+  overflow: hidden;
+  border: 0 none;
+  background: #f1f1f1;
+}
+
+body .ui-button {
+  margin: 0;
+  color: #ffffff;
+  background-color: #5b62b3;
+  border: 1px solid #5b62b3;
+  font-size: 14px;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+body .ui-button:enabled:hover {
+  background-color: #454da0;
+  color: #ffffff;
+  border-color: #454da0;
+}
+
+body .ui-button:enabled:focus {
+  outline: 0 none;
+  outline-offset: 0px;
+  box-shadow: 0 0 0 0.2em #dde0ff;
+}
+
+body .ui-calendar.ui-calendar-w-btn .ui-inputtext {
+  height: 30px;
+  width: 210px;
+}
+
+body .ui-calendar.ui-calendar-w-btn .ui-datepicker-trigger.ui-button {
+  width: 30px;
+  height: 30px;
+}
+
+body
+  .ui-datepicker:not(.ui-state-disabled)
+  .ui-datepicker-header
+  .ui-datepicker-prev:hover,
+body
+  .ui-datepicker:not(.ui-state-disabled)
+  .ui-datepicker-header
+  .ui-datepicker-next:hover {
+  color: #5b62b3;
+}
+
+body
+  .ui-datepicker:not(.ui-state-disabled)
+  .ui-datepicker-header
+  .ui-datepicker-prev:focus,
+body
+  .ui-datepicker:not(.ui-state-disabled)
+  .ui-datepicker-header
+  .ui-datepicker-next:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.2em #dde0ff;
+}

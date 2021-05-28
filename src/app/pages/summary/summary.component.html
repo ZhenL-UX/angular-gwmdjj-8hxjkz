@@ -1,0 +1,210 @@
+<div class="card">
+  <p-dropdown [options]="region" [(ngModel)]="selectedRegion" optionLabel="name"
+    [style]="{ height: '30px', 'line-height': '30px' , 'background': '#5b62b3' }" id="dropdown-region">
+  </p-dropdown>
+</div>
+
+<div class="p-grid">
+  <div class="p-col-8">
+    <div class="box">
+      <div class="p-grid">
+        <h5 class="c2 bold p-col-12" style="text-align: left;">
+          <img src="assets/img/icon_title.png" alt="" />
+          Todays To Do List
+        </h5>
+        <div class="p-col ">
+          <div class="box-accSummary bgc1" (click)="detailClick()"
+            style="background-image: url('assets/img/deco1.png');background-position: 100% 0%;">
+            <h5 class="mb4 white">
+              Apply for Repo Title
+            </h5>
+            <h1 class="white">45</h1>
+          </div>
+        </div>
+        <div class="p-col">
+          <div class="box-accSummary bgc2" (click)="detailClick()"
+            style="background-image: url('assets/img/deco2.png');background-position: 100% 0%;">
+            <h5 class="mb4 white">
+              PA/VA Apply for Repo Title
+            </h5>
+            <h1 class="white">25</h1>
+          </div>
+        </div>
+        <div class="p-col">
+          <div class="box-accSummary bgc3" (click)="detailClick()"
+            style="background-image: url('assets/img/deco3.png');background-position: 100% 0%;">
+            <h5 class="mb4 white">
+              Follow Ups
+            </h5>
+            <h1 class="white">45</h1>
+          </div>
+        </div>
+        <div class="p-col">
+          <div class="box-accSummary  bgc4"
+            style="background-image: url('assets/img/deco4.png');background-position: 100% 0%;">
+            <h5 class="mb4 white">
+              Past Due Follow Ups
+            </h5>
+            <h1 class="white">5</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-col-4">
+    <div class="box">
+      <div class="p-grid">
+        <h5 class="c2 bold p-col-12" style="text-align: left;">
+          <img src="assets/img/icon_title.png" alt="" />
+          Data Quality Allerts
+        </h5>
+        <div class="p-col">
+          <div class="box-accSummary bgc4-1">
+            <h5 class="mb4 c4">
+              Possible Condition Issues
+            </h5>
+            <h1 class="white c4">1</h1>
+            <img src="assets/img/alert_1.png" alt="" class="fr" style="margin-top: -48px;" />
+          </div>
+        </div>
+        <div class="p-col">
+          <div class="box-accSummary bgc4-1" style="border: 2px solid transparent;">
+            <h5 class="mb4 c4">
+              Possible Data Issues with Auto IMS
+            </h5>
+            <h1 class="white c4">2</h1>
+            <img src="assets/img/alert_1.png" alt="" class="fr" style="margin-top: -48px;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-col-8">
+    <div class="box">
+      <div class="p-grid">
+        <h5 class="c2 bold p-col-12" style="text-align: left;">
+          <img src="assets/img/icon_title.png" alt="" />
+          Summary
+        </h5>
+        <div class="p-col">
+          <div class="box3-1">
+            <h5 class="mb4 c1">
+              Full Queue
+            </h5>
+            <h1 class="c1">500</h1>
+            <!-- <img src="assets/img/summary_1.png" alt="" class="fr" style="margin-top: -58px;" /> -->
+          </div>
+        </div>
+        <div class="p-col">
+          <div class="box3-2" (click)="detailClick()">
+            <h5 class="mb4 c2">
+              Unit Sold Missing Title
+            </h5>
+            <h1 class="c2">45</h1>
+            <!-- <img src="assets/img/summary_2.png" alt="" class="fr" style="margin-top: -58px;" /> -->
+          </div>
+        </div>
+        <div class="p-col">
+          <div class="box3-3">
+            <h5 class="mb4 c3">
+              Title Problem Holds
+            </h5>
+            <h1 class="c3">120</h1>
+            <!-- <img src="assets/img/summary_3.png" alt="" class="fr" style="margin-top: -58px;" /> -->
+          </div>
+        </div>
+        <div class="p-col">
+          <div class="box3-4">
+            <h5 class="mb4 c4">
+              Exceeds Title ETA
+            </h5>
+            <h1 class="c4">22</h1>
+            <!-- <img src="assets/img/summary_4.png" alt="" class="fr" style="margin-top: -58px;" /> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-col-4">
+
+
+    <div class="box">
+      <div class="p-grid">
+        <h5 class="c2 bold p-col-12" style="text-align: left;">
+          <img src="assets/img/icon_title.png" alt="" />
+          Today's Activities
+        </h5>
+        <div class="p-col">
+          <div class="box-accSummary bgc1-1">
+            <h5 class="mb4 c1">
+              Repo Title Applied
+            </h5>
+            <h1 class="white c1">45</h1>
+          </div>
+        </div>
+        <div class="p-col">
+          <div class="box-accSummary bgc2-1">
+            <h5 class="mb4 c2">
+              Title Holds Placed
+            </h5>
+            <h1 class="white c2">22</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-col-8">
+    <div class="box">
+      <h5 class="c2 bold p-col-12" style="text-align: left;">
+        <img src="assets/img/icon_title.png" alt="" />
+        Full Queue Region Overview by Age
+      </h5>
+
+      <p-table [value]="age" [style]="{ marginBottom: '78px', marginTop: '8px' }">
+        <ng-template pTemplate="header">
+          <tr>
+            <th style="width: 15%;">Age Band</th>
+            <th>WEST</th>
+            <th>PACIFIC</th>
+            <th>MIDWEST</th>
+            <th>N EAST</th>
+            <th>S EAST</th>
+            <th style="width: 15%;">Grand Total</th>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-age>
+          <tr>
+            <td>{{ age.ageBand }}</td>
+            <td>{{ age.west }}</td>
+            <td>{{ age.pacific }}</td>
+            <td>{{ age.midwest }}</td>
+            <td>{{ age.nEast }}</td>
+            <td>{{ age.sEast }}</td>
+            <td>{{ age.grandTotal }}</td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="footer">
+          <tr style="border: 1px solid #d4d4d4;">
+            <td>Totals</td>
+            <td>32</td>
+            <td>58</td>
+            <td>20</td>
+            <td>39</td>
+            <td>35</td>
+            <td>184</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+  <div class="p-col-4">
+    <div class="box">
+      <h5 class="c2 bold p-col-12" style="text-align: left;">
+        <img src="assets/img/icon_title.png" alt="" />
+        Full Queue Region Overview Chart
+      </h5>
+      <p-chart type="bar" [data]="data" [options]='hideBox'></p-chart>
+    </div>
+  </div>
+</div>
